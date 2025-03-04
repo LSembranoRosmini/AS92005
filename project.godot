@@ -16,7 +16,6 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
 
 [rendering]
 
