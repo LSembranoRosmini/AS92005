@@ -43,8 +43,8 @@ size = Vector2(640, 48)
 position = Vector2(0, 192)
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(319.5, -95.5)
-scale = Vector2(1.66406, 2.00463)
+position = Vector2(319.5, -86.5)
+scale = Vector2(1.66406, 1.9213)
 texture = ExtResource("2_um0mu")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
