@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Maple_Volley"
-run/main_scene="uid://dx0qn6c2ojitb"
+run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
 [display]
