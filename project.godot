@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Maple_Volley"
+run/main_scene="uid://dx0qn6c2ojitb"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]
