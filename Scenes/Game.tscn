@@ -86,5 +86,5 @@ player_index = 0
 
 [node name="Acorn-Player2" parent="." instance=ExtResource("2_huxdp")]
 modulate = Color(1, 0.645588, 0.484692, 1)
-position = Vector2(465, 222)
+position = Vector2(465, 223)
 scale = Vector2(-1, 1)
