@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://dx0qn6c2ojitb"]
+[gd_scene load_steps=15 format=4 uid="uid://dx0qn6c2ojitb"]
 
 [ext_resource type="Texture2D" uid="uid://bant5gcyjrfjc" path="res://Assets/Terrain (16x16)-1.png (1).png" id="1_470q2"]
 [ext_resource type="PackedScene" uid="uid://3v7ccyq6lodo" path="res://Scenes/acorn_player.tscn" id="2_huxdp"]
 [ext_resource type="Texture2D" uid="uid://cy4dj6lhwxcir" path="res://Assets/plx-1-1.png-1.png.png" id="2_um0mu"]
+[ext_resource type="PackedScene" uid="uid://cl716rojq3nfe" path="res://Scenes/ball.tscn" id="4_as0sg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1xv6"]
 texture = ExtResource("1_470q2")
@@ -27,14 +28,25 @@ texture = ExtResource("1_470q2")
 physics_layer_0/collision_layer = 1
 sources/7 = SubResource("TileSetAtlasSource_s1xv6")
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ja3hm"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vo1tp"]
 size = Vector2(32, 240)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6qykk"]
+friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djsee"]
 size = Vector2(32, 240)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dx10g"]
+friction = 0.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cqu47"]
 size = Vector2(6, 112)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3oycx"]
+bounce = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3j83"]
 size = Vector2(640, 48)
@@ -53,38 +65,50 @@ tile_set = SubResource("TileSet_1o73h")
 [node name="Solid" type="Node2D" parent="."]
 
 [node name="Right Wall" type="RigidBody2D" parent="Solid"]
+physics_material_override = SubResource("PhysicsMaterial_ja3hm")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Right Wall"]
 position = Vector2(624, 120)
 shape = SubResource("RectangleShape2D_vo1tp")
 
 [node name="Left Wall" type="RigidBody2D" parent="Solid"]
+physics_material_override = SubResource("PhysicsMaterial_6qykk")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Left Wall"]
 position = Vector2(16, 120)
 shape = SubResource("RectangleShape2D_djsee")
 
 [node name="Net" type="RigidBody2D" parent="Solid"]
+physics_material_override = SubResource("PhysicsMaterial_dx10g")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Net"]
 position = Vector2(312, 184)
 shape = SubResource("RectangleShape2D_cqu47")
 
 [node name="Floor" type="RigidBody2D" parent="Solid"]
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_3oycx")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Floor"]
 position = Vector2(320, 264)
 shape = SubResource("RectangleShape2D_o3j83")
 
 [node name="Acorn-Player" parent="." instance=ExtResource("2_huxdp")]
-position = Vector2(150, 223)
+position = Vector2(149, 222)
 player_index = 0
 
 [node name="Acorn-Player2" parent="." instance=ExtResource("2_huxdp")]
 modulate = Color(1, 0.645588, 0.484692, 1)
 position = Vector2(465, 223)
 scale = Vector2(-1, 1)
+
+[node name="Ball" parent="." instance=ExtResource("4_as0sg")]
+position = Vector2(221, 88)

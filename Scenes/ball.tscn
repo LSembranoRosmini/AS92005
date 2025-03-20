@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl716rojq3nfe"]
+
+[ext_resource type="Texture2D" uid="uid://dwlkym7wi1xab" path="res://Assets/Ball.png" id="1_jgjgo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_er4k5"]
+bounce = 1.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jqde1"]
+radius = 21.0
+height = 50.0
+
+[node name="Ball" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_er4k5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -9.53674e-07)
+scale = Vector2(2.03125, 1.875)
+texture = ExtResource("1_jgjgo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_jqde1")
