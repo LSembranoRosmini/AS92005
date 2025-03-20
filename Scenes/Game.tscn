@@ -112,3 +112,4 @@ scale = Vector2(-1, 1)
 
 [node name="Ball" parent="." instance=ExtResource("4_as0sg")]
 position = Vector2(221, 88)
+gravity_scale = 2.5
