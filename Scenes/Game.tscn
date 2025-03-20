@@ -67,6 +67,7 @@ tile_set = SubResource("TileSet_1o73h")
 [node name="Right Wall" type="RigidBody2D" parent="Solid"]
 physics_material_override = SubResource("PhysicsMaterial_ja3hm")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Right Wall"]
 position = Vector2(624, 120)
@@ -75,6 +76,7 @@ shape = SubResource("RectangleShape2D_vo1tp")
 [node name="Left Wall" type="RigidBody2D" parent="Solid"]
 physics_material_override = SubResource("PhysicsMaterial_6qykk")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Left Wall"]
 position = Vector2(16, 120)
@@ -83,6 +85,7 @@ shape = SubResource("RectangleShape2D_djsee")
 [node name="Net" type="RigidBody2D" parent="Solid"]
 physics_material_override = SubResource("PhysicsMaterial_dx10g")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Net"]
 position = Vector2(312, 184)
@@ -91,6 +94,7 @@ shape = SubResource("RectangleShape2D_cqu47")
 [node name="Floor" type="RigidBody2D" parent="Solid"]
 physics_material_override = SubResource("PhysicsMaterial_3oycx")
 gravity_scale = 0.0
+freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Floor"]
 position = Vector2(320, 264)

@@ -6,15 +6,16 @@
 bounce = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jqde1"]
-radius = 21.0
-height = 50.0
+radius = 12.0
+height = 26.0
 
 [node name="Ball" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_er4k5")
+gravity_scale = 0.1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1.90735e-06, -9.53674e-07)
-scale = Vector2(2.03125, 1.875)
+position = Vector2(0, 5.96046e-08)
+scale = Vector2(1.24219, 1.07813)
 texture = ExtResource("1_jgjgo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
