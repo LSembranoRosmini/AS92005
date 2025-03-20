@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://dx0qn6c2ojitb"]
+[gd_scene load_steps=15 format=4 uid="uid://dx0qn6c2ojitb"]
 
 [ext_resource type="Texture2D" uid="uid://bant5gcyjrfjc" path="res://Assets/Terrain (16x16)-1.png (1).png" id="1_470q2"]
 [ext_resource type="PackedScene" uid="uid://3v7ccyq6lodo" path="res://Scenes/acorn_player.tscn" id="2_huxdp"]
 [ext_resource type="Texture2D" uid="uid://cy4dj6lhwxcir" path="res://Assets/plx-1-1.png-1.png.png" id="2_um0mu"]
+[ext_resource type="PackedScene" uid="uid://cl716rojq3nfe" path="res://Scenes/ball.tscn" id="4_sd1a2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1xv6"]
 texture = ExtResource("1_470q2")
@@ -103,3 +104,6 @@ player_index = 0
 modulate = Color(1, 0.645588, 0.484692, 1)
 position = Vector2(465, 223)
 scale = Vector2(-1, 1)
+
+[node name="Ball" parent="." instance=ExtResource("4_sd1a2")]
+position = Vector2(203, 85)

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dwlkym7wi1xab" path="res://Assets/Ball.png" id="1_jgjgo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_er4k5"]
+bounce = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jqde1"]
 radius = 21.0
