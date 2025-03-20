@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://dwlkym7wi1xab" path="res://Assets/Ball.png" id="1_jgjgo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_er4k5"]
-bounce = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jqde1"]
 radius = 12.0
 height = 26.0
 
 [node name="Ball" type="RigidBody2D"]
+mass = 0.001
 physics_material_override = SubResource("PhysicsMaterial_er4k5")
 gravity_scale = 0.1
 
