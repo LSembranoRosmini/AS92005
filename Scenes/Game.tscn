@@ -102,7 +102,6 @@ shape = SubResource("RectangleShape2D_o3j83")
 
 [node name="Acorn-Player" parent="." instance=ExtResource("2_huxdp")]
 position = Vector2(149, 222)
-player_index = 0
 
 [node name="Acorn-Player2" parent="." instance=ExtResource("2_huxdp")]
 modulate = Color(1, 0.645588, 0.484692, 1)
