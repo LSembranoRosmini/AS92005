@@ -128,6 +128,8 @@ height = 26.0
 
 [node name="Acorn-Player" type="RigidBody2D"]
 physics_material_override = SubResource("PhysicsMaterial_wnhvh")
+gravity_scale = 3.0
+linear_damp = 8.0
 script = ExtResource("1_wvxnr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
