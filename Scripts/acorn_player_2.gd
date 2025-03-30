@@ -8,14 +8,14 @@ const MAX_SPEED = 1500
 const JUMP_FORCE = -6000
 
 func _physics_process(delta):
-	var direction = Input.get_axis("p1_left", "p1_right")
+	var direction = Input.get_axis("p2_left", "p2_right")
 	var force = Vector2.ZERO
 	
 	if direction:
 		force.x = MOVE_SPEED * direction
 		if abs(linear_velocity.x) > MAX_SPEED: linear_velocity.x = MAX_SPEED * direction
 	
-	if _on_floor() and Input.is_action_just_pressed("p1_jump"):
+	if _on_floor() and Input.is_action_just_pressed("p2_jump"):
 		force.y = JUMP_FORCE
 	
 	_set_animation(direction)
