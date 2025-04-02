@@ -12,7 +12,7 @@ height = 26.0
 mass = 0.95
 physics_material_override = SubResource("PhysicsMaterial_pnvdn")
 gravity_scale = 2.5
-linear_damp = 0.5
+linear_damp = 0.4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 5.96046e-08)
