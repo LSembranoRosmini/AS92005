@@ -8,7 +8,6 @@ const MAX_SPEED = 200
 const JUMP_FORCE = -400
 
 
-
 func _physics_process(delta):
 	var direction = Input.get_axis("p2_left", "p2_right")
 	var force = Vector2.ZERO
