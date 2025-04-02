@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c3dxc4h8skvkt"]
+[gd_scene load_steps=22 format=3 uid="uid://c3dxc4h8skvkt"]
 
 [ext_resource type="Script" path="res://Scripts/acorn_player_2.gd" id="1_sqysf"]
 [ext_resource type="Texture2D" uid="uid://brtpksor22er" path="res://Assets/Acorn/Fall-1.png.png" id="2_xvlvr"]
@@ -120,24 +120,35 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3jg6"]
-size = Vector2(24.0043, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrqk3"]
+size = Vector2(24.0043, 12.4938)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c0mwr"]
+radius = 8.9358
 
 [node name="Acorn-Player" type="RigidBody2D"]
 modulate = Color(1, 0.647059, 0.486275, 1)
-gravity_scale = 0.6
+mass = 2.0
+gravity_scale = 0.95
 center_of_mass_mode = 1
 script = ExtResource("1_sqysf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.16421, 1)
+scale = Vector2(1.4, 1.203)
 sprite_frames = SubResource("SpriteFrames_63sp1")
 animation = &"Move"
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(-2.38419e-07, 4)
-scale = Vector2(0.99982, 1)
-shape = SubResource("RectangleShape2D_c3jg6")
+flip_h = true
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+scale = Vector2(1.4, 1.203)
 target_position = Vector2(0, 20)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-2.38419e-07, 8.515)
+scale = Vector2(1.4, 1.203)
+shape = SubResource("RectangleShape2D_qrqk3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(1.90246, 1.46024)
+shape = SubResource("CircleShape2D_c0mwr")

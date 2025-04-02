@@ -32,13 +32,13 @@ sources/7 = SubResource("TileSetAtlasSource_s1xv6")
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ja3hm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vo1tp"]
-size = Vector2(32, 240)
+size = Vector2(32, 857)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6qykk"]
 friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_djsee"]
-size = Vector2(32, 240)
+size = Vector2(32, 856.5)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dx10g"]
 friction = 0.0
@@ -71,7 +71,7 @@ gravity_scale = 0.0
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Right Wall"]
-position = Vector2(624, 120)
+position = Vector2(624, -188.5)
 shape = SubResource("RectangleShape2D_vo1tp")
 
 [node name="Left Wall" type="RigidBody2D" parent="Solid"]
@@ -80,7 +80,7 @@ gravity_scale = 0.0
 freeze = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Solid/Left Wall"]
-position = Vector2(16, 120)
+position = Vector2(16, -188.25)
 shape = SubResource("RectangleShape2D_djsee")
 
 [node name="Net" type="RigidBody2D" parent="Solid"]
@@ -105,7 +105,7 @@ shape = SubResource("RectangleShape2D_o3j83")
 position = Vector2(169, 197)
 
 [node name="Ball" parent="." instance=ExtResource("4_sd1a2")]
-position = Vector2(177, 36)
+position = Vector2(203, 42)
 gravity_scale = 0.25
 
 [node name="Acorn-Player2" parent="." instance=ExtResource("5_ktd56")]

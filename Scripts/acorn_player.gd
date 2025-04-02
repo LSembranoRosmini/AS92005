@@ -3,9 +3,9 @@ extends RigidBody2D
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var ray_cast_2d = $RayCast2D
 
-const MOVE_SPEED = 50
-const MAX_SPEED = 170
-const JUMP_FORCE = -300
+const MOVE_SPEED = 70
+const MAX_SPEED = 200
+const JUMP_FORCE = -900
 
 func _physics_process(delta):
 	var direction = Input.get_axis("p1_left", "p1_right")
