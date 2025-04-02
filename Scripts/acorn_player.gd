@@ -4,8 +4,8 @@ extends RigidBody2D
 @onready var ray_cast_2d = $RayCast2D
 
 const MOVE_SPEED = 50
-const MAX_SPEED = 200
-const JUMP_FORCE = -400
+const MAX_SPEED = 170
+const JUMP_FORCE = -300
 
 func _physics_process(delta):
 	var direction = Input.get_axis("p1_left", "p1_right")
@@ -34,7 +34,9 @@ func _set_animation(direction):
 	if direction > 0: animated_sprite_2d.flip_h = false
 	elif direction < 0: animated_sprite_2d.flip_h = true
 	
-	if not _on_floor(): animated_sprite_2d.play("Jump")
+	if not _on_floor():  # Not on the floor (air)
+		if linear_velocity.y > 0: animated_sprite_2d.play("Fall")
+		else: animated_sprite_2d.play("Jump")
 	elif abs(linear_velocity.x) > 0.1: animated_sprite_2d.play("Move")
 	else: animated_sprite_2d.play("Idle")
 	
