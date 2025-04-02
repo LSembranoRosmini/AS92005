@@ -135,12 +135,7 @@ script = ExtResource("1_wvxnr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.4, 1.203)
 sprite_frames = SubResource("SpriteFrames_63sp1")
-<<<<<<< HEAD
 animation = &"Move"
-=======
-animation = &"Idle"
-autoplay = "Idle"
->>>>>>> parent of 2c381d1 (Polishing and export for sprint 1)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 scale = Vector2(1.4, 1.203)
