@@ -7,8 +7,10 @@ const MOVE_SPEED = 50
 const MAX_SPEED = 200
 const JUMP_FORCE = -400
 
+
+
 func _physics_process(delta):
-	var direction = Input.get_axis("p1_left", "p1_right")
+	var direction = Input.get_axis("p2_left", "p2_right")
 	var force = Vector2.ZERO
 	
 	if direction:
@@ -16,16 +18,14 @@ func _physics_process(delta):
 		if abs(linear_velocity.x) > MAX_SPEED: linear_velocity.x = MAX_SPEED * direction
 	
 	if not direction:
-		linear_velocity.x = 0  
-	
-	if _on_floor() and Input.is_action_just_pressed("p1_jump"):
+		linear_velocity.x = 0 
+	 
+	if _on_floor() and Input.is_action_just_pressed("p2_jump"):
 		force.y = JUMP_FORCE
 	
 	_set_animation(direction)
 	
 	apply_central_impulse(force)
-	
-	
 	
 func _integrate_forces(state):
 	rotation_degrees = 0

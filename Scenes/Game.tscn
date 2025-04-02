@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://3v7ccyq6lodo" path="res://Scenes/acorn_player.tscn" id="2_huxdp"]
 [ext_resource type="Texture2D" uid="uid://cy4dj6lhwxcir" path="res://Assets/plx-1-1.png-1.png.png" id="2_um0mu"]
 [ext_resource type="PackedScene" uid="uid://cl716rojq3nfe" path="res://Scenes/ball.tscn" id="4_sd1a2"]
-[ext_resource type="PackedScene" uid="uid://drjcalc4ygitq" path="res://Scenes/acorn_player2.tscn" id="5_ktd56"]
+[ext_resource type="PackedScene" uid="uid://c3dxc4h8skvkt" path="res://Scenes/acorn_player2.tscn" id="5_ktd56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1xv6"]
 texture = ExtResource("1_470q2")
