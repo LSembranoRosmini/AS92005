@@ -5,8 +5,7 @@ extends RigidBody2D
 
 const MOVE_SPEED = 70
 const MAX_SPEED = 200
-const JUMP_FORCE = -900
-
+const JUMP_FORCE = -850
 
 func _physics_process(delta):
 	var direction = Input.get_axis("p2_left", "p2_right")
@@ -17,14 +16,16 @@ func _physics_process(delta):
 		if abs(linear_velocity.x) > MAX_SPEED: linear_velocity.x = MAX_SPEED * direction
 	
 	if not direction:
-		linear_velocity.x = 0 
-	 
+		linear_velocity.x = 0  
+	
 	if _on_floor() and Input.is_action_just_pressed("p2_jump"):
 		force.y = JUMP_FORCE
 	
 	_set_animation(direction)
 	
 	apply_central_impulse(force)
+	
+	
 	
 func _integrate_forces(state):
 	rotation_degrees = 0

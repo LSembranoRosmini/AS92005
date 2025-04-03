@@ -124,7 +124,7 @@ animations = [{
 size = Vector2(24.0043, 12.4938)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c0mwr"]
-radius = 8.9358
+radius = 8.93796
 
 [node name="Acorn-Player" type="RigidBody2D"]
 modulate = Color(1, 0.647059, 0.486275, 1)
@@ -149,6 +149,6 @@ scale = Vector2(1.4, 1.203)
 shape = SubResource("RectangleShape2D_qrqk3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
-scale = Vector2(1.90246, 1.46024)
+position = Vector2(0, 2)
+scale = Vector2(1.862, 1.55)
 shape = SubResource("CircleShape2D_c0mwr")

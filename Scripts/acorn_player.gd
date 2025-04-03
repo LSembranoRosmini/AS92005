@@ -5,7 +5,7 @@ extends RigidBody2D
 
 const MOVE_SPEED = 70
 const MAX_SPEED = 200
-const JUMP_FORCE = -900
+const JUMP_FORCE = -850
 
 func _physics_process(delta):
 	var direction = Input.get_axis("p1_left", "p1_right")
