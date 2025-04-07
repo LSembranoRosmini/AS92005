@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dx0qn6c2ojitb"]
+[gd_scene load_steps=18 format=4 uid="uid://dx0qn6c2ojitb"]
 
 [ext_resource type="Texture2D" uid="uid://bant5gcyjrfjc" path="res://Assets/Terrain (16x16)-1.png (1).png" id="1_470q2"]
 [ext_resource type="PackedScene" uid="uid://3v7ccyq6lodo" path="res://Scenes/acorn_player.tscn" id="2_huxdp"]
@@ -51,6 +51,12 @@ friction = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o3j83"]
 size = Vector2(640, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n26ms"]
+size = Vector2(277, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xkbb"]
+size = Vector2(293, 3)
 
 [node name="Node2D" type="Node2D"]
 
@@ -110,3 +116,17 @@ gravity_scale = 0.25
 
 [node name="Acorn-Player2" parent="." instance=ExtResource("5_ktd56")]
 position = Vector2(480, 200)
+
+[node name="Area2DL" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DL"]
+position = Vector2(170.5, 238.5)
+shape = SubResource("RectangleShape2D_n26ms")
+debug_color = Color(0.996346, 0, 0.188497, 0.42)
+
+[node name="Area2DR" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DR"]
+position = Vector2(461.5, 238.5)
+shape = SubResource("RectangleShape2D_5xkbb")
+debug_color = Color(2.02149e-06, 0.636769, 0.4007, 0.42)
