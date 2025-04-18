@@ -22,6 +22,11 @@ window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
+[global_group]
+
+ball=""
+player=""
+
 [input]
 
 p1_left={
