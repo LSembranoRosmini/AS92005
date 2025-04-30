@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://dx0qn6c2ojitb"]
+[gd_scene load_steps=21 format=4 uid="uid://dx0qn6c2ojitb"]
 
 [ext_resource type="Texture2D" uid="uid://bant5gcyjrfjc" path="res://Assets/Terrain (16x16)-1.png (1).png" id="1_470q2"]
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_qg1gu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cy4dj6lhwxcir" path="res://Assets/plx-1-1.png-1.png.png" id="2_um0mu"]
 [ext_resource type="PackedScene" uid="uid://cl716rojq3nfe" path="res://Scenes/ball.tscn" id="4_sd1a2"]
 [ext_resource type="PackedScene" uid="uid://c3dxc4h8skvkt" path="res://Scenes/acorn_player2.tscn" id="5_ktd56"]
+[ext_resource type="FontFile" uid="uid://bh6tpfuf4jnto" path="res://Fonts/RETROTECH.ttf" id="7_3d2ae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1xv6"]
 texture = ExtResource("1_470q2")
@@ -60,8 +61,10 @@ size = Vector2(277, 3)
 size = Vector2(293, 3)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7l272"]
-font_size = 25
-outline_size = 10
+font = ExtResource("7_3d2ae")
+font_size = 55
+font_color = Color(0.721569, 0.498039, 0.305882, 1)
+outline_size = 15
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
@@ -146,10 +149,10 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="UIBasic"]
 layout_mode = 0
-offset_left = 287.0
-offset_top = 25.0
-offset_right = 337.0
-offset_bottom = 60.0
+offset_left = 259.0
+offset_top = 10.0
+offset_right = 368.0
+offset_bottom = 56.0
 text = "0 - 0"
 label_settings = SubResource("LabelSettings_7l272")
 
