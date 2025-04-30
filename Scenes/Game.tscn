@@ -62,10 +62,13 @@ size = Vector2(293, 3)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7l272"]
 font = ExtResource("7_3d2ae")
-font_size = 55
-font_color = Color(0.721569, 0.498039, 0.305882, 1)
-outline_size = 15
-outline_color = Color(0, 0, 0, 1)
+font_size = 35
+font_color = Color(0.701961, 0.462745, 0.258824, 1)
+outline_size = 10
+outline_color = Color(0.384314, 0.152941, 0.054902, 1)
+shadow_size = 15
+shadow_color = Color(0.0159711, 0.00248008, 0.000448191, 1)
+shadow_offset = Vector2(0, 0)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_qg1gu")
@@ -149,10 +152,11 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="UIBasic"]
 layout_mode = 0
-offset_left = 259.0
-offset_top = 10.0
-offset_right = 368.0
-offset_bottom = 56.0
+offset_left = 266.0
+offset_top = 12.0
+offset_right = 336.0
+offset_bottom = 42.0
+scale = Vector2(1.36, 1.33856)
 text = "0 - 0"
 label_settings = SubResource("LabelSettings_7l272")
 
